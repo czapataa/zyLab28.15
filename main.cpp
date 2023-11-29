@@ -47,6 +47,8 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
          break;
       }
       case 'd':{
+         cout << "REMOVE SONG" << endl;
+         cout 
       }
       case 'c':{
       }
