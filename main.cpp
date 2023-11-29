@@ -15,9 +15,25 @@ void PrintMenu(string playlistTitle) {
    cout << endl;
 }
 
-PlaylistNode* ExecuteMenu(char option, string playlistTitle, PlaylistNode* headNode) {
-   /* Type your code here */
-   
+PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* headNode) {
+   std::string id, songName, artistName;
+   int songLength;
+   int currentPos, newPos, listlength = 0;
+   swtich (option) {
+      case 'a':{
+      }
+      case 'd':{
+      }
+      case 'c':{
+      }
+      case 's':{
+      }
+      case 't':{
+      }
+      case 'o':{
+      }
+      case 'q':{
+      }
 }
 
 int main() {
