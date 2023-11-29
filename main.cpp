@@ -21,6 +21,30 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
    int currentPos, newPos, listlength = 0;
    swtich (option) {
       case 'a':{
+         cout << "ADD SONG" << endl;
+         cout << "Enter song's unique ID:" << endl;
+         getline(cin, id);
+         cout << "Enter song's name:" << endl;
+         getline(cin, soneName);
+         cout << "Enter artist's name:" << endl;
+         getline(cin, artistName);
+         cout << "Enter song's length (in seconds):" << endl;
+         cin >> songLength;
+         cout << endl;
+         if(cin.peek() == '\n'){
+            cin.ignore();
+         }
+         PlatlistNode* newNode = new PlaylistNode(id, songName, artistName, songLength);
+         if(headNode == nullptr) {
+            headNode = newNode;
+         }else {
+            PlaylistNode* currentNode = headNode;
+            while(currentNode->GetNext() != nullptr) {
+               currentNode = currentNode->GetNext();
+            }
+            currentNode->SetNext(newNode);
+         }
+         break;
       }
       case 'd':{
       }
