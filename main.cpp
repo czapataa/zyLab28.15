@@ -77,6 +77,52 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
                break;   
       }
       case 'c':{
+         cout << "CHANGE POSITION OF SONG" << endl;
+         cout << "Enter song's current position:" << endl;
+         cin >> currentPos;
+         cout << "Enter new position for song:" << endl;
+         cin >> newPos;
+         PlaylistNode* currentNode = headNode;
+         while(currentNode != nullptr) {
+            listLength++;
+            currentNode = currentNode->GetNext();
+         }
+         if(newPos < 1){
+            newPos = 1;
+         } else if (newPos > listLength) {
+            newPos = listLength;
+         }
+         PlaylistNode* prevNode = nullptr;
+         currentNode = headNode;
+         for(int i = 1; currentNode != nullptr && i < currentPos; ++i) {
+            prevNode = currentNode;
+            currentNode = currentNode->GetNext();
+         }
+         if(currentNode == nullptr) {
+            cout << "Invalid current position." << endl;
+            break;
+         }
+         if(prevNode == nullptr) {
+            headNode = currentNode->GetNext();
+         } else {
+            prevNode->SetNext(currentNode->GetNext());
+         }
+         PlaylistNode* newNode = currentNode;
+         currentNode = headNode;
+         prevNode = nullptr;
+         for(int i = 1; currentNode != nullptr && i < newPos; ++i) {
+            prevNode = currentNode;
+            currentNode = currentNode->GetNext();
+         }
+         if(prevNoe == nullptr) {
+            newNode->SetNext(headNode);
+         }else {
+            newNode->SetNext(currentNode);
+            prevNode->SetNext(newNode);
+         }
+         cout << "\" << newNode->GetSongName() << "\" moved to position " << newPos << endl;
+         cout << endl;
+         break;
       }
       case 's':{
       }
