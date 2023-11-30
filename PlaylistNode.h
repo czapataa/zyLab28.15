@@ -17,7 +17,7 @@ public:
 
   std::string GetID() const;
   std::string GetSongName() const;
-  std::steing GetArtistName() const;
+  std::string GetArtistName() const;
   int GetSongLength() const;
   PlaylistNode* GetNext() const;
 
