@@ -157,6 +157,23 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
          break;
       }
       case 'o':{
+         cout << playlistTitle << " - OUTPUT FULL PLAYLIST" << endl;
+         if(headNode == nullptr){
+            cout << "Playlist is empty";
+            cout << endl;
+         }
+         else{
+            int songNumber = 1;
+            PlaylistNode* currentNode = headNode;
+            while(currentNode != nullptr){
+               cout << songNumber << "." << endl;
+               cuurentNode-> PrintPlayListNode();
+               cout << endl;
+               currentNode = currentNode->GetNext();
+               songNumber++;
+            }
+         }
+         break;
       }
       case 'q':{
       }
