@@ -182,7 +182,7 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
       }
       return headNode;
 }
-
+}
 int main() {
    std::string playlistTitle;
    char option;
