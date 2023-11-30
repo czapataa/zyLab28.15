@@ -9,7 +9,7 @@ std::string PlaylistNode::GetID() const{
 std::string PlaylistNode::GetSongName() const {
   return songName;
 }
-std::string PlatlistNode::GetArtistName() const{
+std::string PlaylistNode::GetArtistName() const{
   return artistName;
 }
 int PlaylistNode::GetSongLength() const{
