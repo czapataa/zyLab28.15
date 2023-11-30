@@ -1,7 +1,7 @@
 #include "PlaylistNode.h"
 #include <iostream>
 
-PlaylistNode::PlaylistNode() : uniqueID("none"), songName("none"), artistName("none")
+PlaylistNode::PlaylistNode() : uniqueID("none"), songName("none"), artistName("none") {}
 PlaylistNode::PlaylistNode(std::string id, std::string name, std::string artist, int length) : uniqueID(id), songName(name), artistName(artist), songLength(length), nextNodePtr(nullptr){}
 std::string PlaylistNode::GetID() const{
   return uniqueID;
