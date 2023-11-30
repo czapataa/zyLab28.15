@@ -19,13 +19,13 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
    std::string id, songName, artistName;
    int songLength;
    int currentPos, newPos, listlength = 0;
-   swtich (option) {
+   switch (option) {
       case 'a':{
          cout << "ADD SONG" << endl;
          cout << "Enter song's unique ID:" << endl;
          getline(cin, id);
          cout << "Enter song's name:" << endl;
-         getline(cin, soneName);
+         getline(cin, songName);
          cout << "Enter artist's name:" << endl;
          getline(cin, artistName);
          cout << "Enter song's length (in seconds):" << endl;
@@ -34,7 +34,7 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
          if(cin.peek() == '\n'){
             cin.ignore();
          }
-         PlatlistNode* newNode = new PlaylistNode(id, songName, artistName, songLength);
+         PlaylistNode* newNode = new PlaylistNode(id, songName, artistName, songLength);
          if(headNode == nullptr) {
             headNode = newNode;
          }else {
