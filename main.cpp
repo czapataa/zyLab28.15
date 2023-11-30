@@ -176,7 +176,11 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
          break;
       }
       case 'q':{
+         break;
+         default;
+         cout << "Invalid option. Please try again." << endl;
       }
+      return headNode;
 }
 
 int main() {
