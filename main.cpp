@@ -195,7 +195,7 @@ int main() {
       PrintMenu(playlistTitle);
       cout <<"Choose an option:" << endl;
       cin >> option;
-      if(cin.peek() == '\n){
+      if(cin.peek() == '\n'){
       cin.ignore();
       }
       headNode = ExecuteMenu(option,playlistTitle, headNode);
