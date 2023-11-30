@@ -70,7 +70,7 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
                   prevNode->SetNext(currentNode->GetNext());
                }
 
-               cout << "\"" << currentNode->GetSongName() << "\"" removed." << endl;
+               cout << "\"" << currentNode->GetSongName() << "\" removed." << endl;
                cout << endl;
                delete currentNode;
             }
