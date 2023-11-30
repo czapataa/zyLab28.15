@@ -144,6 +144,17 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
          break;     
       }
       case 't':{
+         int totalTime = 0;
+         PlaylistNode* currentNode = headNode;
+
+         while (currentNode != nullptr) {
+            totalTime += currentNode->GetSongLength();
+            currentNode = currentNode->GetNext();
+         }
+         cout << "OUTPUT TOTAL TIMEOF PLAYLIST (IN SECONDS)" << endl;
+         cout << "Total time: " << totalTime << " seconds" << endl;
+         cout << endl;
+         break;
       }
       case 'o':{
       }
