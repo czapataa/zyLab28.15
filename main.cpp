@@ -61,8 +61,7 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
          }
          if(currentNode == nullptr){
             cout << "Song with ID " << id << " not found." << endl;
-         }
-            else{
+         } else{
                if(prevNode == nullptr){
                   headNode = currentNode->GetNext();
                }
@@ -116,6 +115,7 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
          }
          if(prevNode == nullptr) {
             newNode->SetNext(headNode);
+            headNode = newNode;
          }else {
             newNode->SetNext(currentNode);
             prevNode->SetNext(newNode);
@@ -159,7 +159,7 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
       case 'o':{
          cout << playlistTitle << " - OUTPUT FULL PLAYLIST" << endl;
          if(headNode == nullptr){
-            cout << "Playlist is empty";
+            cout << "Playlist is empty" << endl;
             cout << endl;
          }
          else{
@@ -175,13 +175,12 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
          }
          break;
       }
-      case 'q':{
+      case 'q':
          break;
-         default:
+      default:
          cout << "Invalid option. Please try again." << endl;
       }
       return headNode;
-}
 }
 int main() {
    std::string playlistTitle;
