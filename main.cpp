@@ -125,6 +125,23 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
          break;
       }
       case 's':{
+         cout << "OUTPUT SONGS BY SPECIFIC ARTIST" << endl;
+         cout << "Enter artist's name:" << endl;
+         geline(cin, artistName);
+         cout << endl;
+         int position = 1;
+         PlaylistNode* currentNode = headNode;
+
+         while(currentNode != nullptr){
+            if(currentNode->GetArtistName() == artistName){
+               cout << position << "." << endl;
+               currentNode->PrintPlaylistNode();
+               cout << endl;
+            }
+            cuurentNode = currentNode->GetNext();
+            position++;
+         }
+         break;     
       }
       case 't':{
       }
