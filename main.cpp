@@ -151,7 +151,7 @@ PlaylistNode* ExecuteMenu(char option, std::string playlistTitle, PlaylistNode* 
             totalTime += currentNode->GetSongLength();
             currentNode = currentNode->GetNext();
          }
-         cout << "OUTPUT TOTAL TIMEOF PLAYLIST (IN SECONDS)" << endl;
+         cout << "OUTPUT TOTAL TIME OF PLAYLIST (IN SECONDS)" << endl;
          cout << "Total time: " << totalTime << " seconds" << endl;
          cout << endl;
          break;
