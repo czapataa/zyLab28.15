@@ -30,5 +30,5 @@ void PlaylistNode::PrintPlaylistNode() const{
   std::cout << "Unique ID: " << uniqueID << std::endl;
   std::cout << "Song Name: " << songName << std::endl;
   std::cout << "Artist Name: " << artistName << std::endl;
-  std::cout << "Song Length (int seconds): " << songLength << std::endl;
+  std::cout << "Song Length (in seconds): " << songLength << std::endl;
 }
